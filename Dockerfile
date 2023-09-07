@@ -1,6 +1,6 @@
 FROM  centos:latest
 LABEL kube.io=foundation
-LABEL openshift.io
+LABEL openshift.io=ex288
 MAINTAINER Redhat exam
 RUN   yum install httpd python36 -y
 RUN  sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
