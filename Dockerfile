@@ -1,4 +1,7 @@
-FROM  docker.io/centos:8
+FROM  centos:latest
+LABEL kube.io=foundation
+LABEL openshift.io
+MAINTAINER Redhat exam
 RUN   yum install httpd python36 -y
 RUN  sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 RUN echo "print('Hello, world!')" >  mail.py  &&  chmod u+x mail.py
